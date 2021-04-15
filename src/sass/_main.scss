@@ -1,2 +1,14 @@
 main {
+  .banner {
+    @media screen and (max-width: 768px) {
+      &__desktop {
+        display: none;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      &__mobile {
+        display: none;
+      }
+    }
+  }
 }

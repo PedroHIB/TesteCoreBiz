@@ -5,15 +5,16 @@ class Home {
   }
 
   selectors() {
-    this.teste = $(".btn");
+    // this.teste = $(".btn");
   }
 
   events() {
-    this.teste.on("click", this.clickTeste.bind(this));
+    // this.teste.on("click", this.clickTeste.bind(this));
+    this.teste();
   }
 
-  clickTeste() {
-    alert("hello world");
+  teste() {
+    console.log("hello world");
   }
 }
 

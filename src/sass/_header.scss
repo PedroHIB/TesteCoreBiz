@@ -1,2 +1,68 @@
-header {
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 100%;
+  max-width: 1248px;
+  margin: 0 auto;
+
+  .menu {
+    font-family: $font-family;
+    &__search {
+      width: 100%;
+      max-width: 718px;
+      margin: 0 41px 0 121px;
+      position: relative;
+      display: flex;
+      .boxsearch {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 18px;
+        color: $color-gray;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $color-gray;
+        padding-bottom: 10px;
+      }
+      .btn-search {
+        position: absolute;
+        right: 0px;
+      }
+    }
+
+    &__user-cart {
+      width: 155px;
+      height: 20px;
+      display: inline-flex;
+      justify-content: space-between;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 18px;
+      color: $color-gray;
+
+      .count {
+        background: #f8475f;
+        border-radius: 50%;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 14px;
+        color: $color-white;
+        padding: 1px 5px;
+      }
+
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+        > img {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
 }
