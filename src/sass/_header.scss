@@ -1,7 +1,7 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   height: 80px;
   width: 100%;
   max-width: 1248px;
@@ -9,12 +9,27 @@
 
   .menu {
     font-family: $font-family;
+
+    &__mobile {
+      @include mq(md, min) {
+        display: none;
+      }
+    }
+
     &__search {
       width: 100%;
       max-width: 718px;
-      margin: 0 41px 0 121px;
       position: relative;
       display: flex;
+      justify-content: center;
+
+      @include mq(xl, max) {
+        max-width: 300px;
+      }
+      @include mq(md, max) {
+        display: none;
+      }
+
       .boxsearch {
         font-style: normal;
         font-weight: normal;
@@ -42,9 +57,18 @@
       font-size: 13px;
       line-height: 18px;
       color: $color-gray;
+      @include mq(md, max) {
+        width: initial;
+      }
+
+      .user {
+        @include mq(md, max) {
+          display: none;
+        }
+      }
 
       .count {
-        background: #f8475f;
+        background: $color-red;
         border-radius: 50%;
         font-style: normal;
         font-weight: bold;
@@ -64,5 +88,32 @@
         }
       }
     }
+  }
+}
+
+.menu__search-mobile {
+  width: 83%;
+  position: relative;
+  margin: 0 auto 11px;
+
+  @include mq(md, min) {
+    display: none;
+  }
+
+  .boxsearch {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: $color-gray;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $color-gray;
+    padding-bottom: 10px;
+  }
+
+  .btn-search {
+    position: absolute;
+    right: 0px;
   }
 }

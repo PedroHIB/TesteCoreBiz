@@ -1,11 +1,37 @@
 main {
   .banner {
-    @media screen and (max-width: 768px) {
+    img {
+      outline: none;
+    }
+
+    .slick-dots {
+      bottom: 37px;
+
+      li {
+        background: $color-gray5;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        margin: 0 9px;
+
+        button:before {
+          color: transparent;
+          background: transparent;
+        }
+      }
+
+      .slick-active {
+        background: #f8475f;
+      }
+    }
+
+    @include mq(md, max) {
       &__desktop {
         display: none;
       }
     }
-    @media screen and (min-width: 768px) {
+
+    @include mq(md, min) {
       &__mobile {
         display: none;
       }

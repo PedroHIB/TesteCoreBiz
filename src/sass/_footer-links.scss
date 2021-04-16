@@ -4,12 +4,21 @@ footer {
     .footer-back-links {
       color: $color-white;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       flex-wrap: wrap;
       width: 100%;
       max-width: 1248px;
       margin: 0 auto;
       padding: 25px 0;
+
+      @include mq(md, max) {
+        & > section {
+          padding: 15px;
+        }
+      }
+      @include mq(cstm, max) {
+        justify-content: start;
+      }
 
       .address {
         display: flex;
@@ -22,7 +31,7 @@ footer {
           line-height: 27px;
           &::after {
             content: "";
-            border-bottom: 5px solid #ffffff;
+            border-bottom: 5px solid $color-white;
             width: 44px;
             display: block;
             margin: 15px 0 20px 0;
@@ -38,6 +47,9 @@ footer {
       }
 
       .contact {
+        @include mq(md, max) {
+          margin: 0 auto;
+        }
         ul {
           display: flex;
           flex-direction: column;
@@ -76,6 +88,13 @@ footer {
         font-weight: normal;
         font-size: 10.6017px;
         line-height: 14px;
+
+        @include mq(md, max) {
+          display: flex;
+          justify-content: space-evenly;
+          width: 100%;
+          padding-bottom: 0;
+        }
       }
     }
   }

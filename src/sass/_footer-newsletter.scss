@@ -7,6 +7,10 @@ footer {
     flex-direction: column;
     height: 146px;
     gap: 16px;
+    @include mq(md, max) {
+      height: auto;
+      padding: 24px 0;
+    }
 
     h4 {
       font-family: Lato;
@@ -14,11 +18,19 @@ footer {
       font-weight: bold;
       font-size: 22px;
       line-height: 22px;
+      @include mq(md, max) {
+        padding: 0 15px;
+      }
     }
+
     #newsletter {
       width: 100%;
       display: flex;
       justify-content: center;
+
+      @include mq(md, max) {
+        flex-direction: column;
+      }
 
       .assinar-btn {
         background: $color-black;
@@ -32,6 +44,10 @@ footer {
         font-size: 14px;
         line-height: 14px;
         cursor: pointer;
+        @include mq(md, max) {
+          margin: 15px auto;
+          width: 300px;
+        }
       }
 
       input {
@@ -40,7 +56,6 @@ footer {
         border-radius: 5px;
         max-width: 248px;
         width: 100%;
-
         font-family: Lato;
         font-style: normal;
         font-weight: bold;
@@ -49,10 +64,18 @@ footer {
         display: flex;
         align-items: center;
         color: $color-gray4;
+
+        @include mq(md, max) {
+          margin: 15px auto;
+          max-width: 270px;
+        }
       }
 
       .nwl-email {
         margin: 0 8px;
+        @include mq(md, max) {
+          margin: 15px auto;
+        }
       }
     }
   }
