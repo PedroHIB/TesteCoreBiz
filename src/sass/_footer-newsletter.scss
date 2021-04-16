@@ -1,0 +1,59 @@
+footer {
+  .footer-newsletter {
+    background: $color-gray3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 146px;
+    gap: 16px;
+
+    h4 {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 22px;
+    }
+    #newsletter {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      .assinar-btn {
+        background: $color-black;
+        color: $color-white;
+        border-radius: 5px;
+        padding: 15px;
+        width: 140px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 14px;
+        cursor: pointer;
+      }
+
+      input {
+        border: none;
+        padding: 15px;
+        border-radius: 5px;
+        max-width: 248px;
+        width: 100%;
+
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 14px;
+        display: flex;
+        align-items: center;
+        color: $color-gray4;
+      }
+
+      .nwl-email {
+        margin: 0 8px;
+      }
+    }
+  }
+}
