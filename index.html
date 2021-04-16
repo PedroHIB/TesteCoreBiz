@@ -47,12 +47,16 @@
         </div>
         <div class="menu__user-cart">
           <div class="user">
-            <img class="icone" src="/src/img/icon-user.png" />
-            Minha Conta
+            <a href="#">
+              <img class="icone" src="/src/img/icon-user.png" />
+              Minha Conta
+            </a>
           </div>
           <div class="cart">
-            <img class="icone" src="/src/img/icon-cart.png" />
-            <div class="count">1</div>
+            <a href="#">
+              <img class="icone" src="/src/img/icon-cart.png" />
+              <div class="count">1</div>
+            </a>
           </div>
         </div>
       </div>
@@ -81,26 +85,37 @@
           <img src="./src/img/banner-mobile.png" alt="" srcset="" />
         </div>
       </div>
+      <div class="shelf">
+        <h4 class="shelf__title">Mais Vendidos</h4>
+        <div class="shelf__container"></div>
+      </div>
     </main>
     <footer>
       <div class="footer-newsletter">
         <h4>Participe de nossas news com promoções e novidades!</h4>
-        <form method="POST" id="newsletter">
+        <form method="post" id="newsletter">
           <input
             type="text"
-            name="newsletter_name"
+            name="name"
             placeholder="Digite seu nome"
+            class="form-fields"
+            required
           />
           <input
-            type="text"
-            class="nwl-email"
-            name="newsletter_inp"
+            type="email"
+            class="nwl-email form-fields"
+            name="email"
             placeholder="Digite seu email"
+            required
           />
           <button class="assinar-btn">Eu quero!</button>
-          <!-- Error message -->
-          <div id="error_msg"></div>
         </form>
+        <div class="msg-section">
+          <div id="success_msg">Sua inscrição foi realizada com sucesso!</div>
+          <div id="error_msg">
+            Um erro ocorreu por favor tente novamente mais tarde.
+          </div>
+        </div>
       </div>
       <div class="footer-links">
         <div class="footer-back-links">
@@ -158,11 +173,16 @@
   <script
     type="text/javascript"
     language="javascript"
-    src="/src/js/app.js"
+    src="/src/js/slick.js"
   ></script>
   <script
     type="text/javascript"
     language="javascript"
-    src="/src/js/slick.js"
+    src="/src/js/product.js"
+  ></script>
+  <script
+    type="text/javascript"
+    language="javascript"
+    src="/src/js/index.js"
   ></script>
 </html>

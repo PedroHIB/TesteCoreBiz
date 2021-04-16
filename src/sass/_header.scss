@@ -44,6 +44,7 @@
       .btn-search {
         position: absolute;
         right: 0px;
+        cursor: pointer;
       }
     }
 
@@ -62,8 +63,10 @@
       }
 
       .user {
-        @include mq(md, max) {
-          display: none;
+        a {
+          @include mq(md, max) {
+            display: none;
+          }
         }
       }
 
@@ -78,7 +81,7 @@
         padding: 1px 5px;
       }
 
-      > div {
+      > div a {
         display: flex;
         align-items: center;
         justify-content: space-between;
