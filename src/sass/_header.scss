@@ -1,2 +1,122 @@
-header {
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+  width: 100%;
+  max-width: 1248px;
+  margin: 0 auto;
+
+  .menu {
+    font-family: $font-family;
+
+    &__mobile {
+      @include mq(md, min) {
+        display: none;
+      }
+    }
+
+    &__search {
+      width: 100%;
+      max-width: 718px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+
+      @include mq(xl, max) {
+        max-width: 300px;
+      }
+      @include mq(md, max) {
+        display: none;
+      }
+
+      .boxsearch {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 18px;
+        color: $color-gray;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $color-gray;
+        padding-bottom: 10px;
+      }
+      .btn-search {
+        position: absolute;
+        right: 0px;
+        cursor: pointer;
+      }
+    }
+
+    &__user-cart {
+      width: 155px;
+      height: 20px;
+      display: inline-flex;
+      justify-content: space-between;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 18px;
+      color: $color-gray;
+      @include mq(md, max) {
+        width: initial;
+      }
+
+      .user {
+        a {
+          @include mq(md, max) {
+            display: none;
+          }
+        }
+      }
+
+      .count {
+        background: $color-red;
+        border-radius: 50%;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 14px;
+        color: $color-white;
+        padding: 1px 5px;
+      }
+
+      > div a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+        > img {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+.menu__search-mobile {
+  width: 83%;
+  position: relative;
+  margin: 0 auto 11px;
+
+  @include mq(md, min) {
+    display: none;
+  }
+
+  .boxsearch {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: $color-gray;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $color-gray;
+    padding-bottom: 10px;
+  }
+
+  .btn-search {
+    position: absolute;
+    right: 0px;
+  }
 }
